@@ -55,6 +55,10 @@ const _ = {
         }
         return undefined;
     },
+    drop(arr, num) {
+        let numToDrop = num || 1;
+        return arr.slice(numToDrop, arr.length)
+    },
 };
 
 // Do not write or modify code below this line.
