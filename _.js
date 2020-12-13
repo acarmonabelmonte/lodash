@@ -31,6 +31,10 @@ const _ = {
             return paddedString;
         }
     },
+    has(obj, key) {
+        let hasValue = key in obj;
+        return hasValue;
+    },
 };
 
 // Do not write or modify code below this line.
