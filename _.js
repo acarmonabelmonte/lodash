@@ -55,9 +55,8 @@ const _ = {
         }
         return undefined;
     },
-    drop(arr, num) {
-        let numToDrop = num || 1;
-        return arr.slice(numToDrop, arr.length)
+    drop(arr, num = 1) {
+        return arr.slice(num, arr.length)
     },
     dropWhile(arr, predicate) {
         const cb = (element, index) => {
@@ -67,6 +66,14 @@ const _ = {
         let droppedArr = this.drop(arr, dropNumber);
         return droppedArr;
     },
+    chunk(arr, size = 1) {
+        let arrChunks = [];
+        for (let i = 0; i < arr.length; i += size) {
+            let arrChunk = arr.slice(i, i + size);
+            arrChunks.push(arrChunk);
+        }
+        return arrChunks;
+    }
 };
 
 // Do not write or modify code below this line.
