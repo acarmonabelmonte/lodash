@@ -5,20 +5,21 @@ const _ = {
         let clampedValue = Math.min(lowerClampedValue, upper);
         return clampedValue;
     },
-
     inRange(number, start, end) {
         if (end === undefined) {
             end = start;
             start = 0;
         }
-
         if (end < start) {
             let temp = end;
             end = start;
             start = temp;
         }
         return number >= start && number < end;
-    }
+    },
+    words(str) {
+        return str.split(' ');
+    },
 };
 
 // Do not write or modify code below this line.
