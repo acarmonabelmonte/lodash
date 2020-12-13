@@ -20,6 +20,17 @@ const _ = {
     words(str) {
         return str.split(' ');
     },
+    pad(str, len) {
+        const srtLen = str.length;
+        if (srtLen >= len) {
+            return str;
+        } else {
+            let startPaddingLength = Math.floor((len - srtLen) / 2);
+            let endPaddingLength = len - srtLen - startPaddingLength;
+            let paddedString = `${' '.repeat(startPaddingLength)}${str}${' '.repeat(endPaddingLength)}`;
+            return paddedString;
+        }
+    },
 };
 
 // Do not write or modify code below this line.
