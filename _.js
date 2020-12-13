@@ -35,6 +35,14 @@ const _ = {
         let hasValue = key in obj;
         return hasValue;
     },
+    invert(obj) {
+        let invertedObj = {};
+        for (const key in obj) {
+            const originalValue = obj[key];
+            invertedObj = { originalValue: key };
+        }
+        return invertedObj;
+    },
 };
 
 // Do not write or modify code below this line.
